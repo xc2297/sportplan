@@ -1,5 +1,5 @@
 # ==================== Stage 1: 构建前端 ====================
-FROM node:18-alpine AS frontend-build
+FROM node:22-alpine AS frontend-build
 
 WORKDIR /app/frontend
 # 先复制依赖文件，利用 Docker 缓存层
