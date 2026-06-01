@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+*.iml
+.vscode
+
+# 构建产物
+target
+frontend/dist
+frontend/node_modules
+node_modules
+
+# 日志和临时文件
+*.log
+hs_err_pid*
+replay_pid*
+
+# 上传目录
+uploads
+
+# 文档
+CLAUDE.md
+HELP.md
+*.md
+!quick_think_style_file_2026运动积分奖惩系统_PRD.md
+
+# Claude 配置
+.claude
