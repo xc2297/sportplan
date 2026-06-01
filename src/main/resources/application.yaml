@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://sh-cynosdbmysql-grp-08zd5g2g.sql.tencentcdb.com:28925/epointbid_tp7_1_50_3_wjs?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
     username: root
-    password: Epoint@123
+    password: ENC(UgHzTRteuArHvvQP6jTKcmhqqi2I+ekv)
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -21,15 +21,15 @@ server:
 
 # 腾讯云 COS 对象存储配置（微信云托管）
 cos:
-  secret-id: AKIDQj056Ultsiy25DZnosnZ9VkofJjy2uYD
-  secret-key: Z4Wp6KNRXTBsaIqFU5f3GIAzeBg2CBau
+  secret-id: ENC(kKBG5rbwtF8xKMQW4udkgJghpAWiofmUOPmL8Zc49aQXGCFbM8dts6seMmUrvs7V)
+  secret-key: ENC(MXE26mzrqlPW7Xwe42wUakq43n1FjNSCa/hBa5nltO1BxYZymXvGu9qwlnpt3lus)
   bucket: 7072-prod-d5gmrfgnwfd468b6c-1434041221
   region: ap-shanghai
   domain: 7072-prod-d5gmrfgnwfd468b6c-1434041221.tcb.qcloud.la
 
 # 智谱 AI 配置
 zhipu:
-  api-key: sk-9067d14bd6217c4654516d06deed82a5428e124cf44eaebf09c1b573397bcbf9
+  api-key: ENC(Kah0UxXRaq4wgXk0vvhF49OUGRmnzDcMDfrKcrMlwB97+Q4sKKfqqArQLn9IwJdYNsGz3HrCn+5lpWbL+ZaAwna0nWQYw1ng9pQYKPcGamk=)
   model: GLM-5.1
   api-url: http://47.94.160.234:8080/v1/chat/completions
 
