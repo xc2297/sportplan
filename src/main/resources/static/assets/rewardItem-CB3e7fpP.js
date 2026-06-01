@@ -1,0 +1,1 @@
+import{u as e}from"./index-Dw3JC4TX.js";function t(){return e.get(`/reward-items`)}function n(t){return e.post(`/reward-items`,t)}function r(t,n){return e.put(`/reward-items/${t}`,n)}function i(t){return e.delete(`/reward-items/${t}`)}export{r as i,i as n,t as r,n as t};

@@ -1,0 +1,1 @@
+import{u as e}from"./index-Dw3JC4TX.js";function t(t){return e.get(`/dashboard/${t}`)}function n(){return e.get(`/dashboard/leaderboard`)}function r(){return e.get(`/dashboard/admin/weekly-scores`)}export{t as n,n as r,r as t};

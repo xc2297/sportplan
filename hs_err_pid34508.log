@@ -1,0 +1,232 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1908384 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:390), pid=34508, tid=42056
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_60-b27) (build 1.8.0_60-b27)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001f1e3000):  JavaThread "C2 CompilerThread4" daemon [_thread_in_native, id=42056, stack(0x0000000021530000,0x0000000021630000)]
+
+Stack: [0x0000000021530000,0x0000000021630000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+Current CompileTask:
+C2:  13262 1744       4       java.net.URLClassLoader$1::run (5 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001f2b8000 JavaThread "Service Thread" daemon [_thread_blocked, id=53100, stack(0x0000000021e30000,0x0000000021f30000)]
+  0x000000001f21c000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=47092, stack(0x0000000021c30000,0x0000000021d30000)]
+  0x000000001f211800 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=40744, stack(0x0000000021b30000,0x0000000021c30000)]
+  0x000000001f200800 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=41036, stack(0x0000000021a30000,0x0000000021b30000)]
+  0x000000001f1f8000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=29064, stack(0x0000000021930000,0x0000000021a30000)]
+  0x000000001f1f6000 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=37920, stack(0x0000000021830000,0x0000000021930000)]
+  0x000000001f1eb800 JavaThread "C2 CompilerThread6" daemon [_thread_in_native, id=8064, stack(0x0000000021730000,0x0000000021830000)]
+  0x000000001f1e8800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=44424, stack(0x0000000021630000,0x0000000021730000)]
+=>0x000000001f1e3000 JavaThread "C2 CompilerThread4" daemon [_thread_in_native, id=42056, stack(0x0000000021530000,0x0000000021630000)]
+  0x000000001f1e2000 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=52104, stack(0x0000000021430000,0x0000000021530000)]
+  0x000000001f1e0800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=38428, stack(0x0000000021330000,0x0000000021430000)]
+  0x000000001f1df800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=50840, stack(0x0000000021230000,0x0000000021330000)]
+  0x000000001f190800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8072, stack(0x0000000021130000,0x0000000021230000)]
+  0x000000001f18f800 JavaThread "Attach Listener" daemon [_thread_blocked, id=15512, stack(0x0000000021030000,0x0000000021130000)]
+  0x000000001f179000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26376, stack(0x0000000020f30000,0x0000000021030000)]
+  0x000000001d4a6000 JavaThread "Finalizer" daemon [_thread_blocked, id=49528, stack(0x0000000020dc0000,0x0000000020ec0000)]
+  0x000000001d4a1000 JavaThread "Reference Handler" daemon [_thread_blocked, id=22364, stack(0x0000000020cc0000,0x0000000020dc0000)]
+  0x00000000033c2800 JavaThread "main" [_thread_in_vm, id=45284, stack(0x00000000032c0000,0x00000000033c0000)]
+
+Other Threads:
+  0x000000001f146000 VMThread [stack: 0x0000000020bc0000,0x0000000020cc0000] [id=46880]
+  0x000000001f33a000 WatcherThread [stack: 0x0000000021f30000,0x0000000022030000] [id=39992]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000018ccba0] CodeCache_lock - owner thread: 0x0000000000000000
+
+Heap:
+ PSYoungGen      total 75264K, used 51078K [0x000000076c180000, 0x0000000771580000, 0x00000007c0000000)
+  eden space 64512K, 62% used [0x000000076c180000,0x000000076e92c6b8,0x0000000770080000)
+  from space 10752K, 97% used [0x0000000770080000,0x0000000770ab52a8,0x0000000770b00000)
+  to   space 10752K, 0% used [0x0000000770b00000,0x0000000770b00000,0x0000000771580000)
+ ParOldGen       total 172032K, used 16K [0x00000006c4400000, 0x00000006cec00000, 0x000000076c180000)
+  object space 172032K, 0% used [0x00000006c4400000,0x00000006c4404000,0x00000006cec00000)
+ Metaspace       used 15141K, capacity 15408K, committed 15616K, reserved 1062912K
+  class space    used 1824K, capacity 1944K, committed 2048K, reserved 1048576K
+
+Card table byte_map: [0x0000000012880000,0x0000000013060000] byte_map_base: 0x000000000f25e000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a39a5b0
+ Begin Bits: [0x00000000144a0000, 0x0000000018390000)
+ End Bits:   [0x0000000018390000, 0x000000001c280000)
+
+Polling page: 0x0000000001880000
+
+CodeCache: size=245760Kb used=8930Kb max_used=8941Kb free=236829Kb
+ bounds [0x00000000034c0000, 0x0000000003d90000, 0x00000000124c0000]
+ total_blobs=2499 nmethods=2137 adapters=271
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 11.237 Thread 0x000000001f21c000 nmethod 2129 0x0000000003d76810 code [0x0000000003d76960, 0x0000000003d76a70]
+Event: 11.237 Thread 0x000000001f211800 nmethod 2133 0x0000000003d76ad0 code [0x0000000003d76c20, 0x0000000003d76d30]
+Event: 11.237 Thread 0x000000001f1f8000 nmethod 2123 0x0000000003d79a50 code [0x0000000003d79c00, 0x0000000003d7a168]
+Event: 11.237 Thread 0x000000001f1e8800 nmethod 2115 0x0000000003d7a350 code [0x0000000003d7a480, 0x0000000003d7a558]
+Event: 11.237 Thread 0x000000001f1e8800 2119       4       java.util.Hashtable$Enumerator::hasMoreElements (53 bytes)
+Event: 11.238 Thread 0x000000001f1f6000 nmethod 2111 0x0000000003d7c0d0 code [0x0000000003d7c220, 0x0000000003d7c558]
+Event: 11.238 Thread 0x000000001f1f6000 2121       4       org.apache.maven.model.Dependency::setLocation (390 bytes)
+Event: 11.238 Thread 0x000000001f1e2000 nmethod 2104 0x0000000003d79050 code [0x0000000003d791a0, 0x0000000003d79798]
+Event: 11.239 Thread 0x000000001f190800 nmethod 2118 0x0000000003d77390 code [0x0000000003d77500, 0x0000000003d777d8]
+Event: 11.240 Thread 0x000000001f1e8800 nmethod 2119 0x0000000003d77010 code [0x0000000003d77140, 0x0000000003d772b8]
+
+GC Heap History (2 events):
+Event: 4.405 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 64512K [0x000000076c180000, 0x0000000771580000, 0x00000007c0000000)
+  eden space 64512K, 100% used [0x000000076c180000,0x0000000770080000,0x0000000770080000)
+  from space 10752K, 0% used [0x0000000770b00000,0x0000000770b00000,0x0000000771580000)
+  to   space 10752K, 0% used [0x0000000770080000,0x0000000770080000,0x0000000770b00000)
+ ParOldGen       total 172032K, used 0K [0x00000006c4400000, 0x00000006cec00000, 0x000000076c180000)
+  object space 172032K, 0% used [0x00000006c4400000,0x00000006c4400000,0x00000006cec00000)
+ Metaspace       used 11406K, capacity 11594K, committed 11776K, reserved 1058816K
+  class space    used 1405K, capacity 1477K, committed 1536K, reserved 1048576K
+Event: 4.425 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 10452K [0x000000076c180000, 0x0000000771580000, 0x00000007c0000000)
+  eden space 64512K, 0% used [0x000000076c180000,0x000000076c180000,0x0000000770080000)
+  from space 10752K, 97% used [0x0000000770080000,0x0000000770ab52a8,0x0000000770b00000)
+  to   space 10752K, 0% used [0x0000000770b00000,0x0000000770b00000,0x0000000771580000)
+ ParOldGen       total 172032K, used 16K [0x00000006c4400000, 0x00000006cec00000, 0x000000076c180000)
+  object space 172032K, 0% used [0x00000006c4400000,0x00000006c4404000,0x00000006cec00000)
+ Metaspace       used 11406K, capacity 11594K, committed 11776K, reserved 1058816K
+  class space    used 1405K, capacity 1477K, committed 1536K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 7.280 Thread 0x00000000033c2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000003c561ac method=java.util.regex.Pattern$7.isSatisfiedBy(I)Z @ 16
+Event: 7.280 Thread 0x00000000033c2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000003c561ac method=java.util.regex.Pattern$7.isSatisfiedBy(I)Z @ 16
+Event: 7.280 Thread 0x00000000033c2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000003c561ac method=java.util.regex.Pattern$7.isSatisfiedBy(I)Z @ 16
+Event: 7.358 Thread 0x00000000033c2800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x0000000003cb33a8 method=org.apache.maven.model.io.xpp3.MavenXpp3ReaderEx.checkFieldWithDuplicate(Lorg/codehaus/plexus/util/xml/pull/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/S:ñ‹Èo@
+Event: 7.359 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003c6a23c method=org.codehaus.plexus.util.xml.pull.MXParser.nextImpl()I @ 1161
+Event: 7.435 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003cb1364 method=java.lang.String.trim()Ljava/lang/String; @ 63
+Event: 7.490 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003a21e60 method=java.lang.String.regionMatches(ZILjava/lang/String;II)Z @ 25
+Event: 7.552 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003ce780c method=org.codehaus.plexus.util.xml.pull.MXParser.nextImpl()I @ 879
+Event: 8.088 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003d1aa38 method=org.codehaus.plexus.util.xml.pull.MXParser.nextImpl()I @ 972
+Event: 10.226 Thread 0x00000000033c2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003d09684 method=org.apache.maven.model.validation.DefaultModelValidator.isValidIdCharacter(C)Z @ 51
+
+Internal exceptions (10 events):
+Event: 4.915 Thread 0x00000000033c2800 Exception <a 'java/lang/NoClassDefFoundError': javax/annotation/Priority> (0x000000076cda1ef0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 199]
+Event: 5.382 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d37d978) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.382 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d37db90) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.382 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d37dda8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.384 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d385690) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.384 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d3858a8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.384 Thread 0x00000000033c2800 Exception <a 'java/lang/NullPointerException'> (0x000000076d385ac0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u60\4407\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 5.499 Thread 0x00000000033c2800 Implicit null exception at 0x0000000003a10d96 to 0x0000000003a110ed
+Event: 5.500 Thread 0x00000000033c2800 Implicit null exception at 0x000000000389ed94 to 0x000000000389f0ed
+Event: 7.358 Thread 0x00000000033c2800 Implicit null exception at 0x0000000003cb3143 to 0x0000000003cb338d
+
+Events (10 events):
+Event: 11.237 loading class org/apache/maven/graph/DefaultProjectDependencyGraph done
+Event: 11.238 loading class org/apache/maven/project/ProjectSorter
+Event: 11.238 loading class org/apache/maven/project/ProjectSorter done
+Event: 11.239 loading class org/codehaus/plexus/util/dag/DAG
+Event: 11.239 loading class org/codehaus/plexus/util/dag/DAG done
+Event: 12.247 loading class org/codehaus/plexus/util/dag/Vertex
+Event: 12.247 loading class org/codehaus/plexus/util/dag/Vertex done
+Event: 12.249 loading class org/codehaus/plexus/util/dag/TopologicalSorter
+Event: 12.249 loading class org/codehaus/plexus/util/dag/TopologicalSorter done
+Event: 13.259 loading class java/util/LinkedList$ListItr
+
+
+Dynamic libraries:
+0x00007ff7ac450000 - 0x00007ff7ac487000 	D:\eclipse4.9\jdk1.8.0_60\bin\java.exe
+0x00007ffac3f40000 - 0x00007ffac41a7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffac2f70000 - 0x00007ffac3039000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffac12a0000 - 0x00007ffac1697000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffac2eb0000 - 0x00007ffac2f66000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffac2340000 - 0x00007ffac23e9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffac25d0000 - 0x00007ffac2677000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffac3830000 - 0x00007ffac3948000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffac23f0000 - 0x00007ffac25b6000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffac11e0000 - 0x00007ffac1207000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffac2130000 - 0x00007ffac215b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffac1b90000 - 0x00007ffac1cbc000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffac18b0000 - 0x00007ffac1953000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffac16a0000 - 0x00007ffac17eb000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffaa5c40000 - 0x00007ffaa5ed2000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8457_none_3e0b2faee331e92d\COMCTL32.dll
+0x00007ffac2820000 - 0x00007ffac2852000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005a420000 - 0x000000005a4f2000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\msvcr100.dll
+0x0000000059b90000 - 0x000000005a419000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\server\jvm.dll
+0x00007ffac25c0000 - 0x00007ffac25c8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffab5090000 - 0x00007ffab509b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffab5cf0000 - 0x00007ffab5d26000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaa6060000 - 0x00007ffaa606a000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffac3960000 - 0x00007ffac39e0000 	C:\WINDOWS\System32\WS2_32.dll
+0x0000000059b80000 - 0x0000000059b8f000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\verify.dll
+0x0000000059b50000 - 0x0000000059b79000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\java.dll
+0x0000000059b30000 - 0x0000000059b46000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\zip.dll
+0x00007ffac30b0000 - 0x00007ffac381e000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffac0970000 - 0x00007ffac11dc000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffac3af0000 - 0x00007ffac3e73000 	C:\WINDOWS\System32\combase.dll
+0x00007ffac39f0000 - 0x00007ffac3ae6000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffac1d90000 - 0x00007ffac1df6000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffac0890000 - 0x00007ffac08b9000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffaafb30000 - 0x00007ffaafb3a000 	D:\epoint\maven\apache-maven-3.6.3\lib\jansi-native\windows64\jansi.dll
+0x0000000059b10000 - 0x0000000059b2a000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\net.dll
+0x00007ffabfc70000 - 0x00007ffabfcdc000 	C:\WINDOWS\system32\mswsock.dll
+0x0000000059af0000 - 0x0000000059b01000 	D:\eclipse4.9\jdk1.8.0_60\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=D:/epoint/maven/apache-maven-3.6.3/bin/m2.conf -Dmaven.home=D:/epoint/maven/apache-maven-3.6.3 -Dlibrary.jansi.path=D:/epoint/maven/apache-maven-3.6.3/lib/jansi-native -Dmaven.multiModuleProjectDirectory=D:/epoint/ideaproject/sport/sportplan 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher clean package -DskipTests
+java_class_path (initial): D:/epoint/maven/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:/eclipse4.9/jdk1.8.0_60
+CLASSPATH=.;D:\eclipse4.9\jdk1.8.0_60\lib\tool.jar;D:\eclipse4.9\jdk1.8.0_60\lib\dt.jar
+PATH=C:\Users\86178\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\86178\bin;C:\nvm4w\nodejs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\eclipse4.9\jdk1.8.0_60\bin;D:\epoint\maven\apache-maven-3.6.3\bin;C:\Program Files\TortoiseSVN\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\TortoiseGit\bin;C:\Users\86178\AppData\Local\nvm;C:\Program Files\Git\cmd;C:\Users\86178\.local\bin;C:\Users\86178\.eai\bin;C:\Users\86178\AppData\Local\Programs\Python\Launcher;C:\Users\86178\AppData\Local\Microsoft\WindowsApps;C:\Users\86178\AppData\Local\Microsoft\WindowsApps;C:\Users\86178\AppData\Local\nvm;C:\Users\86178\.local\bin;D:\Program Files (x86)\IntelliJ IDEA 2025.3.3\bin;D:\epoint\ideaproject\inopec-jypt\.claude;C:\Program Files\nodejs;C:\Users\86178\AppData\Roaming\npm;C:\Users\86178\AppData\Local\Programs\nodejs;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+USERNAME=86178
+SHELL=C:\Program Files\Git\usr\bin\bash.exe
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 26100 (10.0.26100.8328)
+
+CPU:total 20 (10 cores per cpu, 2 threads per core) family 6 model 154 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16496120k(1602152k free), swap 29295988k(6612k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.60-b23) for windows-amd64 JRE (1.8.0_60-b27), built on Aug  4 2015 11:06:27 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue May 26 10:01:12 2026
+elapsed time: 13 seconds (0d 0h 0m 13s)
+

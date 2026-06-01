@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: sportplan
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  datasource:
+    url: jdbc:mysql://sh-cynosdbmysql-grp-08zd5g2g.sql.tencentcdb.com:28925/epointbid_tp7_1_50_3_wjs?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: root
+    password: Epoint@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+server:
+  port: 8080
+  servlet:
+    context-path: /sportplan-0.0.1-SNAPSHOT
+
+# 腾讯云 COS 对象存储配置（微信云托管）
+cos:
+  secret-id: AKIDQj056Ultsiy25DZnosnZ9VkofJjy2uYD
+  secret-key: Z4Wp6KNRXTBsaIqFU5f3GIAzeBg2CBau
+  bucket: 7072-prod-d5gmrfgnwfd468b6c-1434041221
+  region: ap-shanghai
+  domain: 7072-prod-d5gmrfgnwfd468b6c-1434041221.tcb.qcloud.la
+
+# 智谱 AI 配置
+zhipu:
+  api-key: sk-9067d14bd6217c4654516d06deed82a5428e124cf44eaebf09c1b573397bcbf9
+  model: GLM-5.1
+  api-url: http://47.94.160.234:8080/v1/chat/completions
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-enum-type-handler: org.apache.ibatis.type.EnumTypeHandler
+  global-config:
+    db-config:
+      id-type: auto

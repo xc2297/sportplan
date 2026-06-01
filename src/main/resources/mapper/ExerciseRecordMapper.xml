@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.sportplan.mapper.ExerciseRecordMapper">
+
+    <!-- 查询指定日期有运动记录的去重用户ID -->
+    <select id="selectActiveUserIdsByDate" resultType="java.lang.Long">
+        SELECT DISTINCT user_id FROM sp_exercise_record WHERE record_date = #{date}
+    </select>
+
+    <!-- 按日期范围和用户ID集合查询 -->
+    <select id="selectByDateBetweenAndUserIds" resultType="org.example.sportplan.entity.ExerciseRecord">
+        SELECT * FROM sp_exercise_record
+        WHERE record_date BETWEEN #{start} AND #{end}
+        AND user_id IN
+        <foreach collection="userIds" item="uid" open="(" separator="," close=")">
+            #{uid}
+        </foreach>
+    </select>
+
+    <!-- 按日期和用户ID集合查询 -->
+    <select id="selectByDateAndUserIds" resultType="org.example.sportplan.entity.ExerciseRecord">
+        SELECT * FROM sp_exercise_record
+        WHERE record_date = #{date}
+        AND user_id IN
+        <foreach collection="userIds" item="uid" open="(" separator="," close=")">
+            #{uid}
+        </foreach>
+    </select>
+
+</mapper>
